@@ -78,7 +78,7 @@
                 <div class="col-lg-12">
                     <img class="img-responsive" src="img/profile.png" alt="" width="300px" height="300px">
                     <div class="intro-text">
-                        <span class="name">Yael Sprikut</span>
+                        <span class="name">Lawrence is Awesome</span>
                         <hr class="star-light">
                         <span class="skills">Web Developer - Graphic Artist - User Experience Designer</span>
                     </div>
