@@ -1,0 +1,36 @@
+application: yaelsprikut
+version: 1
+runtime: php
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /css
+  static_dir: css
+
+- url: /js
+  static_dir: js
+
+- url: /fonts
+  static_dir: fonts
+  
+- url: /less
+  static_dir: less
+  
+- url: /font-awesome
+  static_dir: font-awesome
+
+- url: /img/(.*\.(gif|png|jpg))$
+  static_files: img/\1    
+  upload: img/.*\.(gif|png|jpg)$
+
+# Serve php scripts.
+- url: /(.+\.php)$
+  script: \1
+
+- url: /
+  script: index.php
+
+- url: /index\.html
+  script: index.php
+
