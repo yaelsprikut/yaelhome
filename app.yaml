@@ -5,6 +5,11 @@ api_version: 1
 threadsafe: yes
 
 handlers:
+    
+- url: /favicon\.ico
+static_files: favicon.ico
+upload: favicon\.ico
+
 - url: /css
   static_dir: css
 
@@ -24,6 +29,7 @@ handlers:
   static_files: img/\1    
   upload: img/.*\.(gif|png|jpg)$
 
+
 # Serve php scripts.
 - url: /(.+\.php)$
   script: \1
@@ -33,4 +39,6 @@ handlers:
 
 - url: /index\.html
   script: index.php
+  
+
 
