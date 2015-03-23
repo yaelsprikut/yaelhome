@@ -19,6 +19,11 @@ handlers:
   
 - url: /font-awesome
   static_dir: font-awesome
+  
+- url: /home/font/(.*\.otf)
+  static_files: home/font/\1
+  upload: home/font/(.*\.otf)
+  mime_type: application/x-font-otf
 
 - url: /img/(.*\.(gif|png|jpg))$
   static_files: img/\1    
@@ -28,6 +33,11 @@ handlers:
   static_files: favicon.ico
   upload: favicon\.ico
 
+- url: /(.*\.pdf)
+  mime_type: application/pdf
+  static_files: static/\1
+  upload: static/(.*\.pdf)
+  
 # Serve php scripts.
 - url: /(.+\.php)$
   script: \1
@@ -37,6 +47,7 @@ handlers:
 
 - url: /index\.html
   script: index.php
+  
   
 
 
